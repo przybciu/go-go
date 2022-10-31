@@ -1,0 +1,15 @@
+<div class="note">
+    <div class="note_bar">
+        <span class="close material-icons" (click)="close($event)">
+            close
+        </span>
+    </div>
+    <div class="content" contenteditable="true" (blur)="onFocusOut($event)">
+        <ng-content></ng-content>
+    </div>
+    <div class="footer">
+        <button class="save material-icons" (click)="record($event)">
+            save
+        </button>
+    </div>
+</div>

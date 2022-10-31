@@ -1,0 +1,19 @@
+<mat-toolbar class="main">
+  <span>Saving your ideas is a very important mater</span>
+  
+</mat-toolbar>
+
+
+<div class="app">
+	<app-note *ngFor="let note of notes" (dismiss)="deleteNote($event)" (focusout)="saveNote($event)" id="{{note.id}}">{{note.content}}</app-note>
+</div>
+<div  class="toolbar" id="toolbar" tabindex="0">
+	<button class="add material-icons" (click)="addNote()" >
+  note_add
+	</button>
+  <span class="spacer"></span>
+  <button class="save material-icons" (click)="saveAll($event)">
+    save
+</button>
+  
+</div>
